@@ -20,6 +20,8 @@
   /* ─── Accent Colors ─── */
   --color-teal: #3ec9c0;
   --color-teal-glow: rgba(62, 201, 192, 0.25);
+  --color-rift: rgba(123, 255, 245, 0.4);
+  --color-rift-core: #bafff9;
   --color-crimson: #7a1e2e;
   --color-crimson-light: #c03348;
   --color-crimson-glow: rgba(192, 51, 72, 0.2);

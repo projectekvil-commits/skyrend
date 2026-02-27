@@ -28,7 +28,9 @@
 }
 
 .feature-card {
-    background: linear-gradient(135deg, var(--color-bg-card), rgba(30, 33, 64, 0.5));
+    background: linear-gradient(135deg, rgba(12, 14, 22, 0.65), rgba(7, 8, 15, 0.8));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(201, 168, 76, 0.08);
     border-radius: var(--border-radius-lg);
     padding: var(--space-md);
@@ -51,10 +53,10 @@
 }
 
 .feature-card:hover {
-    background: linear-gradient(135deg, var(--color-bg-card-hover), rgba(37, 40, 80, 0.7));
+    background: linear-gradient(135deg, rgba(20, 24, 38, 0.75), rgba(12, 14, 22, 0.85));
     transform: translateY(-4px);
-    border-color: rgba(201, 168, 76, 0.2);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(78, 205, 196, 0.05);
+    border-color: rgba(201, 168, 76, 0.3);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 168, 75, 0.1);
 }
 
 .feature-card:hover::before {

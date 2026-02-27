@@ -176,7 +176,6 @@
     left: 0;
 }
 
-/* Re-enable pointer events on the actual images */
 .faction__char {
     pointer-events: auto;
     /* Fill the container height (card height + overflow) */
@@ -188,14 +187,34 @@
     object-position: bottom center;
     flex-shrink: 0;
     filter: drop-shadow(0 16px 60px rgba(0, 0, 0, 0.7));
-    transition: filter var(--transition-smooth), transform var(--transition-smooth);
+    transition: filter var(--transition-smooth), transform var(--transition-smooth), opacity 1s cubic-bezier(0.2, 1, 0.3, 1), margin-bottom 1s cubic-bezier(0.2, 1, 0.3, 1);
     transform-origin: bottom center;
+
+    /* Hidden by default, JS will add trigger class */
+    opacity: 0;
+    margin-bottom: -60px;
+    /* Slide effect without touching transform */
+}
+
+.faction.revealed .faction__char {
+    opacity: 1;
+    margin-bottom: 0;
 }
 
 .faction__char:hover {
-    filter: drop-shadow(0 24px 80px rgba(201, 168, 76, 0.45)) brightness(1.15);
+    filter: drop-shadow(0 24px 80px rgba(201, 168, 76, 0.45)) brightness(1.15) !important;
     z-index: 12;
     position: relative;
+    /* Removed manual scaling so original custom scales don't shrink on hover */
+}
+
+/* ─── Faction Delays (Primary vs Secondary) ─── */
+.faction__char--primary {
+    transition-delay: 0.1s;
+}
+
+.faction__char--secondary {
+    transition-delay: 0.3s;
 }
 
 /* Orc faction visibility boost */
@@ -204,7 +223,7 @@
 }
 
 .faction--covenant .faction__char:hover {
-    filter: drop-shadow(0 24px 80px rgba(255, 100, 0, 0.6)) brightness(1.32) contrast(1.1);
+    filter: drop-shadow(0 24px 80px rgba(255, 100, 0, 0.6)) brightness(1.32) contrast(1.1) !important;
 }
 
 /* ─── Decorative divider between factions ─── */

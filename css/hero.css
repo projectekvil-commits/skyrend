@@ -131,12 +131,25 @@
     z-index: 3;
     pointer-events: none;
     opacity: 0;
-    animation: cracksAppear 2s 1s ease-out forwards;
+    animation: cracksExplode 1.5s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
 }
 
-@keyframes cracksAppear {
-    to {
+@keyframes cracksExplode {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+        filter: brightness(2) blur(10px);
+    }
+
+    15% {
         opacity: 1;
+        transform: scale(1.05);
+        filter: brightness(1.5) blur(0px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -254,8 +267,34 @@
     margin: 0 auto var(--space-md);
     mix-blend-mode: screen;
     display: block;
-    filter: drop-shadow(0 0 40px var(--color-teal-glow)) drop-shadow(0 0 80px rgba(78, 205, 196, 0.2));
-    animation: logoGlow 3s ease-in-out infinite alternate;
+    /* Use new explosion reveal animation */
+    animation: logoExplode 2.5s cubic-bezier(0.1, 0.9, 0.2, 1) forwards,
+        logoGlow 3s 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes logoExplode {
+    0% {
+        opacity: 0;
+        transform: scale(3) translateY(20px);
+        filter: brightness(3) drop-shadow(0 0 100px var(--color-gold)) drop-shadow(0 0 150px var(--color-teal)) blur(10px);
+    }
+
+    15% {
+        opacity: 1;
+        transform: scale(1.1) translateY(0);
+        filter: brightness(2.5) drop-shadow(0 0 80px var(--color-gold)) blur(0px);
+    }
+
+    30% {
+        transform: scale(0.95);
+        filter: brightness(1.5) drop-shadow(0 0 40px var(--color-teal-glow));
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: drop-shadow(0 0 40px var(--color-teal-glow)) drop-shadow(0 0 80px rgba(78, 205, 196, 0.2));
+    }
 }
 
 @keyframes logoGlow {
@@ -398,7 +437,8 @@
     inset: 0;
     z-index: 6;
     pointer-events: none;
-    background: radial-gradient(ellipse at center, transparent 40%, rgba(13, 15, 26, 0.7) 100%);
+    /* Removed vignette to keep uniform background */
+    background: transparent;
 }
 
 @media (max-width: 768px) {
