@@ -16,18 +16,21 @@ function getNestedValue(obj, path) {
     return path.split('.').reduce((acc, part) => acc && acc[part], obj);
 }
 
+import enData from '../i18n/en.json';
+import ruData from '../i18n/ru.json';
+import uaData from '../i18n/ua.json';
+
+const ALL_TRANSLATIONS = {
+    'en': enData,
+    'ru': ruData,
+    'ua': uaData
+};
+
 /**
  * Load translations for a given language
  */
 async function loadTranslations(lang) {
-    try {
-        const response = await fetch(`/i18n/${lang}.json`);
-        if (!response.ok) throw new Error(`Failed to load ${lang}.json`);
-        return await response.json();
-    } catch (err) {
-        console.error(`[i18n] Error loading ${lang}:`, err);
-        return null;
-    }
+    return ALL_TRANSLATIONS[lang] || null;
 }
 
 /**
