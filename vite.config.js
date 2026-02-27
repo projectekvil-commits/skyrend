@@ -51,6 +51,7 @@ function serveStaticAssets() {
 }
 
 export default defineConfig({
+    base: '/skyrend/',
     plugins: [serveStaticAssets()],
     build: {
         rollupOptions: {
