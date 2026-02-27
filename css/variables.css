@@ -1,0 +1,76 @@
+/* ===================================
+   SKYREND — Design Tokens v2
+   =================================== */
+
+:root {
+  /* ─── Core Palette — Deeper, Warmer Dark Fantasy ─── */
+  --color-bg-deep: #07080f;
+  --color-bg-primary: #0c0e1c;
+  --color-bg-secondary: #111428;
+  --color-bg-card: #161930;
+  --color-bg-card-hover: #1d2040;
+
+  /* ─── Gold — Richer, Warmer ─── */
+  --color-gold: #d4a84b;
+  --color-gold-light: #f0d080;
+  --color-gold-dark: #9a7830;
+  --color-gold-glow: rgba(212, 168, 75, 0.25);
+  --color-gold-shimmer: #ffe8a0;
+
+  /* ─── Accent Colors ─── */
+  --color-teal: #3ec9c0;
+  --color-teal-glow: rgba(62, 201, 192, 0.25);
+  --color-crimson: #7a1e2e;
+  --color-crimson-light: #c03348;
+  --color-crimson-glow: rgba(192, 51, 72, 0.2);
+  --color-amber: #e88b30;
+  --color-amber-glow: rgba(232, 139, 48, 0.15);
+
+  /* ─── Text ─── */
+  --color-text: #ddd9d3;
+  --color-text-muted: #7a7890;
+  --color-text-heading: #f0ece6;
+
+  /* ─── Typography ─── */
+  --font-heading: 'Cinzel', 'Times New Roman', serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-accent: 'Cinzel Decorative', 'Cinzel', serif;
+
+  /* ─── Font Sizes (fluid) ─── */
+  --fs-hero: clamp(3rem, 6vw, 6rem);
+  --fs-h1: clamp(2rem, 4vw, 3.5rem);
+  --fs-h2: clamp(1.5rem, 3vw, 2.5rem);
+  --fs-h3: clamp(1.2rem, 2vw, 1.75rem);
+  --fs-body: clamp(0.95rem, 1.2vw, 1.1rem);
+  --fs-small: clamp(0.8rem, 1vw, 0.9rem);
+  --fs-caption: 0.75rem;
+
+  /* ─── Spacing ─── */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+  --space-2xl: 10rem;
+
+  /* ─── Layout ─── */
+  --max-width: 1280px;
+  --max-width-wide: 1440px;
+  --border-radius: 8px;
+  --border-radius-lg: 16px;
+
+  /* ─── Transitions ─── */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 700ms ease;
+  --transition-smooth: 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ─── Z-Index ─── */
+  --z-navbar: 1000;
+  --z-overlay: 900;
+  --z-modal: 1100;
+  --z-particles: 5;
+  --z-hero-content: 10;
+  --z-cursor: 9999;
+}

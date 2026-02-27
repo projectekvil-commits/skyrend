@@ -1,0 +1,95 @@
+/* ===================================
+   SKYREND — Features Section
+   =================================== */
+
+.features {
+    background: transparent;
+    position: relative;
+}
+
+.features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(180deg, var(--color-gold), transparent);
+}
+
+.features__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.feature-card {
+    background: linear-gradient(135deg, var(--color-bg-card), rgba(30, 33, 64, 0.5));
+    border: 1px solid rgba(201, 168, 76, 0.08);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-md);
+    text-align: center;
+    transition: all var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-gold-dark), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.feature-card:hover {
+    background: linear-gradient(135deg, var(--color-bg-card-hover), rgba(37, 40, 80, 0.7));
+    transform: translateY(-4px);
+    border-color: rgba(201, 168, 76, 0.2);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(78, 205, 196, 0.05);
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-card__icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+    display: block;
+    filter: drop-shadow(0 0 8px var(--color-teal-glow));
+}
+
+.feature-card__title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h3);
+    color: var(--color-gold);
+    margin-bottom: var(--space-xs);
+    letter-spacing: 0.04em;
+}
+
+.feature-card__desc {
+    color: var(--color-text-muted);
+    font-size: var(--fs-small);
+    line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+    .features__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .features__grid {
+        grid-template-columns: 1fr;
+    }
+}

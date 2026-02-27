@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download — Skyrend</title>
+    <meta name="description" content="Download the Skyrend client and join the Race vs Race war." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- CSS (Vite will bundle these) -->
+    <script type="module">
+        import '../css/variables.css';
+        import '../css/global.css';
+        import '../css/navbar.css';
+        import '../css/download-page.css';
+        import '../css/footer.css';
+        import { initI18n } from '../js/i18n.js';
+
+        // Navbar scroll
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('scrolled', window.scrollY > 50);
+            }, { passive: true });
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        }
+
+        // Hamburger
+        const hamburger = document.getElementById('hamburger');
+        const links = document.getElementById('nav-links');
+        if (hamburger && links) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('open');
+                links.classList.toggle('open');
+            });
+        }
+
+        // i18n
+        document.addEventListener('DOMContentLoaded', () => initI18n());
+    </script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="navbar__inner">
+            <a href="/" class="navbar__logo">
+                <img src="/assets/logo/skyrend-logo.png" alt="Skyrend" />
+            </a>
+
+            <div class="navbar__hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__links" id="nav-links">
+                <a href="#" class="navbar__link" data-i18n="nav.wiki">Wiki</a>
+                <a href="/download.html" class="navbar__link" data-i18n="nav.download">Download</a>
+                <a href="#" class="navbar__link" data-i18n="nav.account">Account</a>
+                <a href="#" class="navbar__cta" data-i18n="nav.play">Start Playing</a>
+
+                <div class="lang-switcher">
+                    <button class="lang-switcher__btn active" data-lang="en">EN</button>
+                    <button class="lang-switcher__btn" data-lang="ru">RU</button>
+                    <button class="lang-switcher__btn" data-lang="ua">UA</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- DOWNLOAD HERO -->
+    <section class="download-hero">
+        <h1 class="download-hero__title" data-i18n="download_page.title">Download Skyrend</h1>
+        <p class="download-hero__subtitle" data-i18n="download_page.subtitle">Get the client and join the war. Choose
+            your preferred download method.</p>
+    </section>
+
+    <!-- DOWNLOAD CARDS -->
+    <section class="download-section">
+        <div class="download__grid">
+            <!-- Launcher — Primary -->
+            <div class="download-card download-card--primary">
+                <div class="download-card__icon">🚀</div>
+                <h2 class="download-card__title" data-i18n="download_page.launcher.title">Skyrend Launcher</h2>
+                <p class="download-card__desc" data-i18n="download_page.launcher.desc">Recommended. Auto-updates and
+                    manages your game files.</p>
+                <a href="#" class="download-card__btn" data-i18n="download_page.launcher.button">Download Launcher</a>
+            </div>
+
+            <!-- Torrent -->
+            <div class="download-card">
+                <div class="download-card__icon">🧲</div>
+                <h2 class="download-card__title" data-i18n="download_page.torrent.title">Torrent</h2>
+                <p class="download-card__desc" data-i18n="download_page.torrent.desc">Full game client via torrent.
+                    Fastest for large files.</p>
+                <a href="#" class="download-card__btn" data-i18n="download_page.torrent.button">Download Torrent</a>
+            </div>
+
+            <!-- Google Drive -->
+            <div class="download-card">
+                <div class="download-card__icon">📁</div>
+                <h2 class="download-card__title" data-i18n="download_page.gdrive.title">Google Drive</h2>
+                <p class="download-card__desc" data-i18n="download_page.gdrive.desc">Direct download from Google Drive.
+                </p>
+                <a href="#" class="download-card__btn" data-i18n="download_page.gdrive.button">Open Google Drive</a>
+            </div>
+
+            <!-- MEGA -->
+            <div class="download-card">
+                <div class="download-card__icon">☁️</div>
+                <h2 class="download-card__title" data-i18n="download_page.mega.title">MEGA</h2>
+                <p class="download-card__desc" data-i18n="download_page.mega.desc">Mirror download from MEGA cloud.</p>
+                <a href="#" class="download-card__btn" data-i18n="download_page.mega.button">Open MEGA</a>
+            </div>
+        </div>
+
+        <!-- System Requirements -->
+        <div class="requirements">
+            <h3 class="requirements__title" data-i18n="download_page.requirements.title">System Requirements</h3>
+            <div class="requirements__list">
+                <span class="requirements__label">OS:</span>
+                <span class="requirements__value" data-i18n="download_page.requirements.os">Windows 10/11
+                    (64-bit)</span>
+                <span class="requirements__label">CPU:</span>
+                <span class="requirements__value" data-i18n="download_page.requirements.cpu">Intel i5 / AMD Ryzen 5 or
+                    higher</span>
+                <span class="requirements__label">RAM:</span>
+                <span class="requirements__value" data-i18n="download_page.requirements.ram">8 GB RAM</span>
+                <span class="requirements__label">GPU:</span>
+                <span class="requirements__value" data-i18n="download_page.requirements.gpu">NVIDIA GTX 1060 / AMD RX
+                    580</span>
+                <span class="requirements__label">Storage:</span>
+                <span class="requirements__value" data-i18n="download_page.requirements.storage">20 GB free space</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__socials">
+                <a href="#" class="footer__social-link" aria-label="Discord">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.947 2.418-2.157 2.418z" />
+                    </svg>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="YouTube">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Telegram">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                    </svg>
+                </a>
+            </div>
+            <p class="footer__copyright" data-i18n="footer.copyright">© 2026 Skyrend. All rights reserved.</p>
+            <p class="footer__disclaimer" data-i18n="footer.disclaimer">Skyrend is a fan-made project. Lineage 2 is a
+                registered trademark of NCSOFT Corporation.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+{
+    "nav": {
+        "wiki": "Wiki",
+        "download": "Download",
+        "account": "Account",
+        "play": "Start Playing"
+    },
+    "hero": {
+        "tagline": "The gods have fallen. The sky is torn.",
+        "subtitle": "Choose your race. Claim your dominion.",
+        "cta": "BEGIN YOUR WAR"
+    },
+    "features": {
+        "title": "A New Era of War",
+        "subtitle": "Skyrend reimagines Lineage 2 as an all-out Race vs Race battlefield. Every race stands alone. Every territory must be conquered.",
+        "rvr": {
+            "title": "Race vs Race",
+            "desc": "Four factions wage open war across the continent. No allies outside your blood — only enemies."
+        },
+        "territory": {
+            "title": "Territory Control",
+            "desc": "Capture outposts and strongholds to unlock new regions. No teleports — earn every step forward."
+        },
+        "classes": {
+            "title": "Unique Classes",
+            "desc": "Each race wields its own healers, tanks, mages, archers and assassins. Fully self-sufficient."
+        },
+        "sieges": {
+            "title": "Epic Sieges",
+            "desc": "Massive faction-scale castle sieges determine who controls the most coveted territories."
+        },
+        "archons": {
+            "title": "Archons & Leaders",
+            "desc": "Player-elected race leaders command armies and shape the fate of their people."
+        },
+        "talents": {
+            "title": "Talent System",
+            "desc": "Deep character customization beyond your class. Forge a build that is uniquely yours."
+        }
+    },
+    "factions": {
+        "title": "Choose Your Path",
+        "subtitle": "When the sky shattered and the gods vanished, the races of Aden were left to forge their own destiny. Four factions now vie for supremacy.",
+        "dominion": {
+            "name": "Dominion",
+            "race": "Humans",
+            "lore": "With the gods silent, humanity refused to kneel. United under the banner of Dominion, they forge their destiny through steel, faith, and unyielding ambition. Their legions march not for divine favor — but for absolute sovereignty."
+        },
+        "accord": {
+            "name": "Accord",
+            "race": "Dwarves",
+            "lore": "Masters of craft and commerce, the Dwarves banded together under the Accord — a pact sworn in molten iron. What they lack in stature, they forge in firepower. Their war machines reshape the battlefield."
+        },
+        "veil": {
+            "name": "Veil",
+            "race": "Elves & Dark Elves",
+            "lore": "Once divided by light and shadow, the Elves united behind the Veil when their patron gods fell silent. Ancient magic and moonlit blades now serve a single purpose — survival through unity."
+        },
+        "covenant": {
+            "name": "Covenant",
+            "race": "Orcs",
+            "lore": "The Covenant needs no gods. Bound by blood oaths and primal fury, the Orcs saw the Skyrend as liberation. No chains. No masters. Only the strongest will rule the shattered world."
+        }
+    },
+    "guides": {
+        "title": "Prepare for Battle",
+        "subtitle": "Learn the ways of war before stepping onto the battlefield.",
+        "getting_started": "Getting Started",
+        "class_guides": "Class Guides",
+        "pvp_tactics": "PvP Tactics",
+        "siege_warfare": "Siege Warfare"
+    },
+    "footer": {
+        "copyright": "© 2026 Skyrend. All rights reserved.",
+        "disclaimer": "Skyrend is a fan-made project. Lineage 2 is a registered trademark of NCSOFT Corporation."
+    },
+    "download_page": {
+        "title": "Download Skyrend",
+        "subtitle": "Get the client and join the war. Choose your preferred download method.",
+        "launcher": {
+            "title": "Skyrend Launcher",
+            "desc": "Recommended. Auto-updates and manages your game files.",
+            "button": "Download Launcher"
+        },
+        "torrent": {
+            "title": "Torrent",
+            "desc": "Full game client via torrent. Fastest for large files.",
+            "button": "Download Torrent"
+        },
+        "gdrive": {
+            "title": "Google Drive",
+            "desc": "Direct download from Google Drive.",
+            "button": "Open Google Drive"
+        },
+        "mega": {
+            "title": "MEGA",
+            "desc": "Mirror download from MEGA cloud.",
+            "button": "Open MEGA"
+        },
+        "requirements": {
+            "title": "System Requirements",
+            "os": "Windows 10/11 (64-bit)",
+            "cpu": "Intel i5 / AMD Ryzen 5 or higher",
+            "ram": "8 GB RAM",
+            "gpu": "NVIDIA GTX 1060 / AMD RX 580",
+            "storage": "20 GB free space"
+        }
+    }
+}

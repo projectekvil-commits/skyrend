@@ -1,0 +1,100 @@
+/* ===================================
+   SKYREND — Guides Section
+   =================================== */
+
+.guides {
+    background: transparent;
+    position: relative;
+}
+
+.guides__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.guide-card {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    cursor: pointer;
+    transition: transform var(--transition-smooth);
+}
+
+.guide-card:hover {
+    transform: translateY(-6px);
+}
+
+.guide-card__bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform var(--transition-slow);
+}
+
+.guide-card:hover .guide-card__bg {
+    transform: scale(1.1);
+}
+
+.guide-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 30%, rgba(13, 15, 26, 0.85) 100%);
+    transition: background var(--transition-normal);
+}
+
+.guide-card:hover .guide-card__overlay {
+    background: linear-gradient(180deg, transparent 20%, rgba(13, 15, 26, 0.7) 100%);
+}
+
+.guide-card__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--space-md);
+    z-index: 2;
+}
+
+.guide-card__title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h3);
+    color: var(--color-gold);
+    margin-bottom: var(--space-xs);
+    letter-spacing: 0.04em;
+}
+
+.guide-card__arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-text-muted);
+    font-size: var(--fs-small);
+    transition: color var(--transition-fast), gap var(--transition-fast);
+}
+
+.guide-card:hover .guide-card__arrow {
+    color: var(--color-teal);
+    gap: 12px;
+}
+
+@media (max-width: 1024px) {
+    .guides__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .guides__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guide-card {
+        aspect-ratio: 16 / 9;
+    }
+}

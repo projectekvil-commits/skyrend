@@ -1,0 +1,159 @@
+/* ===================================
+   SKYREND — Download Page
+   =================================== */
+
+.download-hero {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: calc(80px + var(--space-lg)) var(--space-md) var(--space-lg);
+    background: linear-gradient(180deg, var(--color-bg-deep), var(--color-bg-primary));
+    position: relative;
+}
+
+.download-hero__title {
+    font-family: var(--font-accent);
+    font-size: var(--fs-h1);
+    color: var(--color-gold);
+    margin-bottom: var(--space-xs);
+}
+
+.download-hero__subtitle {
+    color: var(--color-text-muted);
+    font-size: var(--fs-body);
+    max-width: 500px;
+}
+
+/* ─── Download Cards ─── */
+.download-section {
+    padding: var(--space-xl) 0;
+    background: var(--color-bg-deep);
+}
+
+.download__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.download-card {
+    background: linear-gradient(135deg, var(--color-bg-card), var(--color-bg-secondary));
+    border: 1px solid rgba(201, 168, 76, 0.08);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-md);
+    text-align: center;
+    transition: all var(--transition-smooth);
+}
+
+.download-card--primary {
+    grid-column: span 2;
+    border-color: rgba(201, 168, 76, 0.2);
+    background: linear-gradient(135deg, rgba(201, 168, 76, 0.05), var(--color-bg-card));
+}
+
+.download-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(201, 168, 76, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.download-card__icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.download-card__title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h3);
+    color: var(--color-text-heading);
+    margin-bottom: var(--space-xs);
+}
+
+.download-card__desc {
+    color: var(--color-text-muted);
+    font-size: var(--fs-small);
+    margin-bottom: var(--space-sm);
+}
+
+.download-card__btn {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: var(--fs-small);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 12px 32px;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-fast);
+}
+
+.download-card--primary .download-card__btn {
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light));
+    color: var(--color-bg-deep);
+}
+
+.download-card--primary .download-card__btn:hover {
+    box-shadow: 0 4px 20px rgba(201, 168, 76, 0.4);
+    transform: translateY(-1px);
+    color: var(--color-bg-deep);
+}
+
+.download-card:not(.download-card--primary) .download-card__btn {
+    border: 1px solid var(--color-gold-dark);
+    color: var(--color-gold);
+    background: transparent;
+}
+
+.download-card:not(.download-card--primary) .download-card__btn:hover {
+    background: rgba(201, 168, 76, 0.1);
+    border-color: var(--color-gold);
+}
+
+/* ─── System Requirements ─── */
+.requirements {
+    max-width: 600px;
+    margin: var(--space-xl) auto 0;
+    padding: 0 var(--space-md);
+    text-align: center;
+}
+
+.requirements__title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h3);
+    color: var(--color-gold);
+    margin-bottom: var(--space-md);
+}
+
+.requirements__list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-xs) var(--space-md);
+    text-align: left;
+}
+
+.requirements__label {
+    color: var(--color-text-muted);
+    font-size: var(--fs-small);
+    font-weight: 600;
+}
+
+.requirements__value {
+    color: var(--color-text);
+    font-size: var(--fs-small);
+}
+
+@media (max-width: 600px) {
+    .download__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .download-card--primary {
+        grid-column: span 1;
+    }
+}
